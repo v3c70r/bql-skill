@@ -1,0 +1,6 @@
+concept: Cost Basis
+formula: Original cost of investment positions
+bql_pattern: COST(sum(position)) for investment accounts
+examples:
+- What is my cost basis?
+- How much did I pay for AAPL?

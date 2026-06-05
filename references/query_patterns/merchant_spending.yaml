@@ -1,0 +1,13 @@
+intent: merchant_spending
+question_examples:
+- How much did I spend at Amazon?
+- What did I buy from Walmart?
+- Show my Uber expenses
+query_template: "SELECT date, narration, COST(position) as amount\nFROM transactions\n\
+  WHERE payee ~ '{merchant}'\n  AND account ~ 'Expenses:'\n  AND date >= '{start_date}'\n\
+  \  AND date < '{end_date}'\nORDER BY date"
+required_assumptions:
+- Payee names match pattern
+- Case-insensitive match via regex
+output_shape: date, narration, amount
+category: spending

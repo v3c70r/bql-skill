@@ -1,0 +1,6 @@
+exclusive_end_date:
+  symptom: Missing data at range boundary
+  fix: Use date >= 'start' AND date < 'end' (exclusive end, inclusive start)
+quarter_definition:
+  symptom: Wrong quarter results
+  fix: QUARTER() returns 1-4 for calendar quarters. Q1 = Jan-Mar

@@ -1,0 +1,12 @@
+intent: income_by_source
+question_examples:
+- How much did I earn?
+- What was my salary income?
+- Show income breakdown
+query_template: "SELECT account, SUM(COST(position)) as total\nFROM transactions\n\
+  WHERE account ~ 'Income:'\n  AND date >= '{start_date}'\n  AND date < '{end_date}'\n\
+  GROUP BY account\nORDER BY total DESC"
+required_assumptions:
+- 'Income accounts use Income: prefix'
+output_shape: account, total
+category: cashflow

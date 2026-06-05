@@ -1,0 +1,12 @@
+intent: dividend_income
+question_examples:
+- How much dividend did I receive?
+- Show my dividend income
+- What dividends did AAPL pay?
+query_template: "SELECT date, narration, COST(position) as amount\nFROM transactions\n\
+  WHERE account ~ 'Income:Dividends'\n  AND date >= '{start_date}'\n  AND date < '{end_date}'\n\
+  ORDER BY date"
+required_assumptions:
+- Dividend income tracked in Income:Dividends
+output_shape: date, narration, amount
+category: investments

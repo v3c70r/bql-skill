@@ -1,0 +1,12 @@
+wrong_account_prefix:
+  symptom: No results for expense query
+  fix: Check that account names use correct prefix (Expenses:, Income:, etc.)
+too_specific_regex:
+  symptom: Too few results
+  fix: Use broader regex pattern. 'Expenses:Food' matches Expenses:Food and Expenses:Food:Restaurants
+too_broad_regex:
+  symptom: Too many results
+  fix: Use more specific regex or add additional filters
+wrong_sign:
+  symptom: Negative values when expecting positive
+  fix: Use ABS(COST(position)) or filter by account type

@@ -1,0 +1,6 @@
+concept: Savings Rate
+formula: "(Income - Expenses) / Income \xD7 100"
+bql_pattern: Calculate total income and total expenses, then compute percentage
+examples:
+- What is my savings rate?
+- How much of my income am I saving?

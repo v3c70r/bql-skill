@@ -1,0 +1,5 @@
+concept: Taxable Income
+formula: Gross income - deductions
+bql_pattern: Income - tax-deductible expenses
+examples:
+- What is my taxable income?

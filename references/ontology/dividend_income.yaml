@@ -1,0 +1,6 @@
+concept: Dividend Income
+formula: SUM of dividend postings
+bql_pattern: WHERE account ~ 'Income:Dividends'
+examples:
+- How much dividend income?
+- Dividends received

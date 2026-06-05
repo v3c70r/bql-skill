@@ -1,0 +1,6 @@
+mixed_currencies:
+  symptom: SUM across different currencies
+  fix: Convert to base currency first using CONVERT()
+implicit_conversion:
+  symptom: Assuming automatic currency conversion
+  fix: BQL does not auto-convert. Use CONVERT() explicitly

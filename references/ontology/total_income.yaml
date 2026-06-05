@@ -1,0 +1,6 @@
+concept: Total Income
+formula: SUM of all income postings
+bql_pattern: SELECT SUM(COST(position)) FROM transactions WHERE account ~ 'Income:'
+examples:
+- How much did I earn?
+- Total income this year

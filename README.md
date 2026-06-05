@@ -53,6 +53,38 @@ python -m unittest tests.test_core -v
 
 The generated BQL skill prompt is at [`skill/prompt.md`](skill/prompt.md). Load this when converting natural language finance questions into BQL queries.
 
+### Cross-Platform Installation
+
+Install to any agent platform:
+
+```bash
+# Auto-detect platform and install (Claude Code, Copilot, Cursor, Windsurf, etc.)
+./install.sh
+
+# Install to specific platform
+./install.sh --platform claude
+./install.sh --platform cursor
+./install.sh --platform copilot
+
+# Install to all detected platforms
+./install.sh --all
+
+# Preview without installing
+./install.sh --dry-run
+```
+
+Supported platforms: Claude Code, GitHub Copilot, VS Code Copilot, Cursor, Windsurf, Cline, Gemini CLI, Goose, OpenCode, Codex CLI, Roo Code, Kilo Code, Pi, and 10+ others.
+
+### After Installation
+
+Open a new agent session and use:
+
+```
+/bql-query-skill How much did I spend on food last month?
+```
+
+Or ask naturally: *"Query my Beancount ledger for restaurant expenses in Q1"*
+
 ---
 
 ## Objective

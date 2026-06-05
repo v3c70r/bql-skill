@@ -1,0 +1,6 @@
+concept: Market Value
+formula: "Current price \xD7 units held"
+bql_pattern: "VALUE(position, date) \u2014 requires price directives"
+examples:
+- What is my portfolio worth?
+- Current value of holdings

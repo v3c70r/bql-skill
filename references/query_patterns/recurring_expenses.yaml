@@ -1,0 +1,14 @@
+intent: recurring_expenses
+question_examples:
+- What are my subscriptions?
+- Find recurring payments
+- Monthly bills
+query_template: "SELECT payee,\n       COUNT(*) as occurrences,\n       SUM(COST(position))\
+  \ as total,\n       AVG(COST(position)) as average\nFROM transactions\nWHERE account\
+  \ ~ 'Expenses:'\n  AND date >= '{start_date}'\nGROUP BY payee\nHAVING COUNT(*) >=\
+  \ {min_occurrences}\nORDER BY total DESC"
+required_assumptions:
+- HAVING clause supported
+- Regular payments tracked
+output_shape: payee, occurrences, total, average
+category: spending

@@ -1,0 +1,20 @@
+missing_cost:
+  pattern: SUM(position)
+  fix: SUM(COST(position))
+  explanation: Always wrap position in COST() for monetary values
+wrong_regex_operator:
+  pattern: account = 'Expenses:Food'
+  fix: account ~ 'Expenses:Food'
+  explanation: Use ~ (regex match) for account patterns, not =
+missing_group_by:
+  pattern: SELECT account, SUM(...) ... (no GROUP BY)
+  fix: Add GROUP BY account
+  explanation: When mixing aggregate and non-aggregate columns, GROUP BY is required
+cost_after_group:
+  pattern: COST(position) after GROUP BY
+  fix: COST(sum(position))
+  explanation: After GROUP BY, wrap position in sum() first, then COST()
+wrong_date_format:
+  pattern: date = '01/01/2024'
+  fix: date >= '2024-01-01'
+  explanation: 'Use ISO date format: YYYY-MM-DD'

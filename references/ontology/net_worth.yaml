@@ -1,0 +1,7 @@
+concept: Net Worth
+formula: Assets - Liabilities
+bql_pattern: SELECT SUM(COST(balance)) FROM balances WHERE account ~ 'Assets:' OR
+  account ~ 'Liabilities:'
+examples:
+- What is my net worth?
+- How much am I worth?

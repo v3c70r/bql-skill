@@ -1,0 +1,13 @@
+intent: net_worth
+question_examples:
+- What is my net worth?
+- How much am I worth?
+- Assets minus liabilities
+query_template: "SELECT SUM(COST(balance)) as net_worth\nFROM balances\nWHERE account\
+  \ ~ 'Assets:'\n   OR account ~ 'Liabilities:'"
+required_assumptions:
+- balances table available
+- Liabilities are negative in COST()
+- All priced in operating currency
+output_shape: net_worth (single value)
+category: networth

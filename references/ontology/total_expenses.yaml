@@ -1,0 +1,6 @@
+concept: Total Expenses
+formula: SUM of all expense postings
+bql_pattern: SELECT SUM(COST(position)) FROM transactions WHERE account ~ 'Expenses:'
+examples:
+- How much did I spend?
+- Total expenses

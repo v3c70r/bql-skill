@@ -1,0 +1,6 @@
+concept: Category Budget
+formula: Actual spending vs budgeted amount per category
+bql_pattern: GROUP BY account with sum, compare to budget
+examples:
+- Am I over budget on food?
+- Budget vs actual

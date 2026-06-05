@@ -1,0 +1,13 @@
+intent: monthly_spending_trend
+question_examples:
+- Show my monthly spending
+- How has my spending changed over time?
+- What is my average monthly spend?
+query_template: "SELECT MONTH(date) as month, SUM(COST(position)) as total\nFROM transactions\n\
+  WHERE account ~ 'Expenses:'\n  AND YEAR(date) = {year}\nGROUP BY MONTH(date)\nORDER\
+  \ BY month"
+required_assumptions:
+- YEAR() and MONTH() extract from date
+- All transactions in operating currency or converted
+output_shape: month, total
+category: spending

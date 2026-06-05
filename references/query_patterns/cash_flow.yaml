@@ -1,0 +1,14 @@
+intent: cash_flow
+question_examples:
+- What is my cash flow?
+- Income vs expenses by month
+- Am I saving money?
+query_template: "SELECT MONTH(date) as month,\n       SUM(CASE WHEN account ~ 'Income:'\
+  \ THEN COST(position) ELSE 0 END) as income,\n       SUM(CASE WHEN account ~ 'Expenses:'\
+  \ THEN COST(position) ELSE 0 END) as expenses\nFROM transactions\nWHERE YEAR(date)\
+  \ = {year}\nGROUP BY MONTH(date)\nORDER BY month"
+required_assumptions:
+- 'Income: and Expenses: prefixes'
+- CASE WHEN supported
+output_shape: month, income, expenses
+category: cashflow

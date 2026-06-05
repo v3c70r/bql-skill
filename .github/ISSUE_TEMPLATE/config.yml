@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: BQL Skill Documentation
+    url: https://github.com/v3c70r/bql-skill/blob/main/SKILL.md
+    about: Read the skill documentation before reporting an issue

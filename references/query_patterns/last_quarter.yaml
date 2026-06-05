@@ -1,0 +1,13 @@
+intent: last_quarter
+question_examples:
+- What did I spend last quarter?
+- Q1 expenses
+- Last 3 months spending
+query_template: "SELECT account, SUM(COST(position)) as total\nFROM transactions\n\
+  WHERE account ~ 'Expenses:'\n  AND QUARTER(date) = {quarter}\n  AND YEAR(date) =\
+  \ {year}\nGROUP BY account\nORDER BY total DESC"
+required_assumptions:
+- QUARTER() function available
+- Calendar quarter definition
+output_shape: account, total
+category: spending

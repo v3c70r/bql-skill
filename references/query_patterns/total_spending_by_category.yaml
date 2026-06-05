@@ -1,0 +1,14 @@
+intent: total_spending_by_category
+question_examples:
+- How much did I spend on food?
+- What were my total expenses by category?
+- Break down my spending
+query_template: "SELECT account, SUM(COST(position)) as total\nFROM transactions\n\
+  WHERE account ~ 'Expenses:{category}'\n  AND date >= '{start_date}'\n  AND date\
+  \ < '{end_date}'\nGROUP BY account\nORDER BY total DESC"
+required_assumptions:
+- 'Account hierarchy uses Expenses: prefix'
+- COST() returns amounts in operating currency
+- Date format is YYYY-MM-DD
+output_shape: account, total (monetary amounts)
+category: spending
