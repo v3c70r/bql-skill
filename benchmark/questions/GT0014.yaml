@@ -1,0 +1,9 @@
+id: GT0014
+ledger: synthetic/multicurrency.bean
+question: What was my total freelance income in EUR?
+expected_result:
+  total_eur_income: 6300.0
+category: multicurrency
+difficulty: hard
+tags:
+- synthetic

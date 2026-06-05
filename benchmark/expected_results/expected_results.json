@@ -1,0 +1,61 @@
+{
+  "GT0001": {
+    "total": 236.8
+  },
+  "GT0002": {
+    "total": 431.1
+  },
+  "GT0003": {
+    "max_amount": 1500.0
+  },
+  "GT0004": {
+    "total": 209.49
+  },
+  "GT0005": {
+    "monthly_rent": 1500.0
+  },
+  "GT0006": {
+    "january": 185.0,
+    "february": 115.0,
+    "march": 130.0
+  },
+  "GT0007": {
+    "total_income": 15000.0
+  },
+  "GT0008": {
+    "total_expenses": 2396.09
+  },
+  "GT0009": {
+    "savings_balance": 3000.0
+  },
+  "GT0010": {
+    "shares": 15.0
+  },
+  "GT0011": {
+    "total_dividends": 11.4
+  },
+  "GT0012": {
+    "total_commissions": 21.0
+  },
+  "GT0013": {
+    "total_cost": 7508.0
+  },
+  "GT0014": {
+    "total_eur_income": 6300.0
+  },
+  "GT0015": {
+    "total_gbp_income": 3500.0
+  },
+  "GT0016": {
+    "total_eur_travel": 800.0
+  },
+  "GT0017": {
+    "total_revenue": 18500.0
+  },
+  "GT0018": {
+    "total_payroll": 8000.0
+  },
+  "GT0019": {
+    "total_marketing": 1100.0
+  }
+}

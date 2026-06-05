@@ -1,0 +1,9 @@
+id: GT0002
+ledger: synthetic/simple_personal.bean
+question: How much did I spend on food in January 2024?
+expected_result:
+  total: 431.1
+category: spending
+difficulty: easy
+tags:
+- synthetic

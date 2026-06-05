@@ -1,0 +1,79 @@
+option "title" "Small Business Ledger"
+option "operating_currency" "USD"
+
+2024-01-01 open Assets:Business:Checking
+2024-01-01 open Assets:Business:Savings
+2024-01-01 open Assets:Business:AccountsReceivable
+2024-01-01 open Assets:Business:Equipment
+2024-01-01 open Assets:Business:Inventory
+2024-01-01 open Liabilities:Business:AccountsPayable
+2024-01-01 open Liabilities:Business:Loan
+2024-01-01 open Income:Business:Sales
+2024-01-01 open Income:Business:Services
+2024-01-01 open Expenses:Business:Rent
+2024-01-01 open Expenses:Business:Supplies
+2024-01-01 open Expenses:Business:Payroll
+2024-01-01 open Expenses:Business:Marketing
+2024-01-01 open Expenses:Business:Software
+2024-01-01 open Expenses:Business:Insurance
+2024-01-01 open Equity:OwnersEquity
+
+2024-01-02 * "Initial investment"
+  Assets:Business:Checking  50000.00 USD
+  Equity:OwnersEquity
+
+2024-01-05 * "Office Depot" "Office supplies"
+  Expenses:Business:Supplies  350.00 USD
+  Assets:Business:Checking
+
+2024-01-10 * "Client A" "Consulting project"
+  Assets:Business:Checking  5000.00 USD
+  Income:Business:Services
+
+2024-01-12 * "Client B" "Product sale - net 30"
+  Assets:Business:AccountsReceivable  3000.00 USD
+  Income:Business:Sales
+
+2024-01-15 * "Landlord" "Office rent"
+  Expenses:Business:Rent  2000.00 USD
+  Assets:Business:Checking
+
+2024-01-20 * "Google" "Google Workspace" #software
+  Expenses:Business:Software  144.00 USD
+  Assets:Business:Checking
+
+2024-01-25 * "Facebook Ads" "Marketing campaign" #marketing
+  Expenses:Business:Marketing  500.00 USD
+  Assets:Business:Checking
+
+2024-01-30 * "Employee 1" "January payroll" #payroll
+  Expenses:Business:Payroll  4000.00 USD
+  Assets:Business:Checking
+
+2024-02-01 * "Insurance Co" "Liability insurance" #insurance
+  Expenses:Business:Insurance  300.00 USD
+  Assets:Business:Checking
+
+2024-02-05 * "Client C" "Web development"
+  Assets:Business:Checking  7500.00 USD
+  Income:Business:Services
+
+2024-02-10 * "Client B" "Payment received"
+  Assets:Business:Checking  3000.00 USD
+  Assets:Business:AccountsReceivable
+
+2024-02-15 * "Landlord" "Office rent"
+  Expenses:Business:Rent  2000.00 USD
+  Assets:Business:Checking
+
+2024-02-20 * "Office Depot" "Office supplies"
+  Expenses:Business:Supplies  275.00 USD
+  Assets:Business:Checking
+
+2024-02-25 * "Facebook Ads" "Marketing" #marketing
+  Expenses:Business:Marketing  600.00 USD
+  Assets:Business:Checking
+
+2024-02-28 * "Employee 1" "February payroll" #payroll
+  Expenses:Business:Payroll  4000.00 USD
+  Assets:Business:Checking

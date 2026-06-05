@@ -1,0 +1,9 @@
+id: GT0003
+ledger: synthetic/simple_personal.bean
+question: What was my largest single expense?
+expected_result:
+  max_amount: 1500.0
+category: spending
+difficulty: medium
+tags:
+- synthetic

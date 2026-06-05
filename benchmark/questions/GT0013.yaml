@@ -1,0 +1,9 @@
+id: GT0013
+ledger: synthetic/investment.bean
+question: What is my total investment position?
+expected_result:
+  total_cost: 11032.0
+category: investments
+difficulty: medium
+tags:
+- synthetic

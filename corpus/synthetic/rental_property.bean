@@ -1,0 +1,68 @@
+option "title" "Rental Property Ledger"
+option "operating_currency" "USD"
+
+2024-01-01 open Assets:Property:123MainSt
+2024-01-01 open Assets:Property:DefaultReserve
+2024-01-01 open Assets:Checking:Rental
+2024-01-01 open Liabilities:Mortgage:123MainSt
+2024-01-01 open Income:Rental:123MainSt
+2024-01-01 open Income:Rental:Sundry
+2024-01-01 open Expenses:Property:Mortgage:Interest
+2024-01-01 open Expenses:Property:Mortgage:Principal
+2024-01-01 open Expenses:Property:Repairs
+2024-01-01 open Expenses:Property:Insurance
+2024-01-01 open Expenses:Property:Taxes
+2024-01-01 open Expenses:Property:Management
+2024-01-01 open Expenses:Property:Utilities
+
+2024-01-01 * "Purchase 123 Main St"
+  Assets:Property:123MainSt  300000.00 USD
+  Liabilities:Mortgage:123MainSt  -240000.00 USD
+  Assets:Checking:Rental  -60000.00 USD
+
+2024-01-05 * "Tenant A" "Rent January" #rental
+  Assets:Checking:Rental  1800.00 USD
+  Income:Rental:123MainSt
+
+2024-01-10 * "Bank" "Mortgage payment"
+  Expenses:Property:Mortgage:Interest  900.00 USD
+  Expenses:Property:Mortgage:Principal  400.00 USD
+  Assets:Checking:Rental
+
+2024-01-15 * "Insurance Co" "Property insurance"
+  Expenses:Property:Insurance  150.00 USD
+  Assets:Checking:Rental
+
+2024-01-20 * "Plumber" "Fix leak" #repair
+  Expenses:Property:Repairs  350.00 USD
+  Assets:Checking:Rental
+
+2024-02-01 * "County" "Property tax"
+  Expenses:Property:Taxes  1200.00 USD
+  Assets:Checking:Rental
+
+2024-02-05 * "Tenant A" "Rent February" #rental
+  Assets:Checking:Rental  1800.00 USD
+  Income:Rental:123MainSt
+
+2024-02-10 * "Bank" "Mortgage payment"
+  Expenses:Property:Mortgage:Interest  897.00 USD
+  Expenses:Property:Mortgage:Principal  403.00 USD
+  Assets:Checking:Rental
+
+2024-02-25 * "Electrician" "Repair wiring" #repair
+  Expenses:Property:Repairs  500.00 USD
+  Assets:Checking:Rental
+
+2024-03-05 * "Tenant A" "Rent March" #rental
+  Assets:Checking:Rental  1800.00 USD
+  Income:Rental:123MainSt
+
+2024-03-10 * "Bank" "Mortgage payment"
+  Expenses:Property:Mortgage:Interest  894.00 USD
+  Expenses:Property:Mortgage:Principal  406.00 USD
+  Assets:Checking:Rental
+
+2024-03-15 * "Insurance Co" "Property insurance"
+  Expenses:Property:Insurance  150.00 USD
+  Assets:Checking:Rental

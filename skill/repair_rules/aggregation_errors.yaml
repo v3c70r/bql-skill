@@ -1,0 +1,6 @@
+missing_having:
+  pattern: WHERE after GROUP BY
+  fix: Use HAVING for post-aggregation filtering
+wrong_level_aggregation:
+  symptom: Incorrect grouping granularity
+  fix: Check GROUP BY columns match expected output granularity

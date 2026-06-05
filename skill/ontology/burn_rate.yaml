@@ -1,0 +1,6 @@
+concept: Burn Rate
+formula: Average monthly expenses
+bql_pattern: AVG of monthly expense totals
+examples:
+- What is my burn rate?
+- How fast am I spending?

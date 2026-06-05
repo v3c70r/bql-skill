@@ -1,5 +1,60 @@
 # BQL Skill Research Project: Autonomous Multi-Agent System
 
+> **Quick Install:** See [Installation & Usage](#installation--usage) below to get started immediately.
+
+## Table of Contents
+
+- [Installation & Usage](#installation--usage)
+- [Objective](#objective)
+- [High-Level Architecture](#high-level-architecture)
+
+## Installation & Usage
+
+### Prerequisites
+
+- Python 3.12+
+- [beancount](https://github.com/beancount/beancount) 3.2+
+- [beanquery](https://github.com/beancount/beanquery) 0.2+
+
+### Install as a Pi Skill
+
+This project includes a Pi-compatible skill. When opened in pi, the skill auto-loads:
+
+```bash
+# The skill is at .pi/skills/bql-skill/SKILL.md
+# pi discovers it automatically when you open this directory
+```
+
+### Manual Install
+
+```bash
+git clone <this-repo>
+cd bql-skill
+pip install beancount beanquery pyyaml
+```
+
+### Quick Start
+
+```bash
+# Run full multi-agent pipeline
+python run_pipeline.py
+
+# Run only the evaluator (Agent 3)
+python run_pipeline.py --agent 3
+
+# Continuous improvement loop
+python run_pipeline.py --loop --max-iterations 10
+
+# Unit tests
+python -m unittest tests.test_core -v
+```
+
+### Skill Prompt
+
+The generated BQL skill prompt is at [`skill/prompt.md`](skill/prompt.md). Load this when converting natural language finance questions into BQL queries.
+
+---
+
 ## Objective
 
 Build a production-grade Beancount Query Language (BQL / BeanQuery) skill capable of answering real-world personal finance questions against previously unseen Beancount ledgers.

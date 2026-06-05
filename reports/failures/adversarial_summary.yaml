@@ -1,0 +1,28 @@
+total_questions: 31
+categories:
+  spending: 9
+  budgeting: 3
+  cashflow: 3
+  networth: 2
+  investments: 4
+  multicurrency: 3
+  tax: 3
+  metadata: 4
+difficulties:
+  hard: 15
+  medium: 8
+  easy: 2
+  very_hard: 6
+ambiguity_types_covered:
+- ambiguous_accounting
+- ambiguous_currency
+- ambiguous_measurement
+- ambiguous_merchant
+- ambiguous_timeframe
+- complex_grouping
+- edge_case_dates
+- implicit_conversion
+- metadata_dependency
+- nested_categories
+- unstated_assumptions
+timestamp: '2026-06-04T21:01:46.822883+00:00'

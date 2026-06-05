@@ -1,0 +1,12 @@
+intent: tagged_transactions
+question_examples:
+- Show my vacation expenses
+- 'What did I spend on #home-improvement?'
+- Business trip expenses
+query_template: "SELECT date, narration, account, COST(position) as amount\nFROM transactions\n\
+  WHERE tags ~ '{tag}'\n  AND account ~ 'Expenses:'\nORDER BY date"
+required_assumptions:
+- 'Tags use # prefix in ledger'
+- tags column contains tag strings
+output_shape: date, narration, account, amount
+category: metadata

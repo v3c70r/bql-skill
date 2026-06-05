@@ -1,0 +1,65 @@
+option "title" "Crypto Ledger"
+option "operating_currency" "USD"
+
+2024-01-01 open Assets:Crypto:Exchange:BTC
+2024-01-01 open Assets:Crypto:Exchange:ETH
+2024-01-01 open Assets:Crypto:ColdWallet:BTC
+2024-01-01 open Assets:Crypto:ColdWallet:ETH
+2024-01-01 open Assets:Checking
+2024-01-01 open Income:Crypto:Mining
+2024-01-01 open Income:Crypto:Staking
+2024-01-01 open Income:CapitalGains:Crypto
+2024-01-01 open Expenses:Crypto:Fees
+
+2024-01-05 price BTC  45000.00 USD
+2024-01-05 price ETH   2400.00 USD
+
+2024-01-05 * "Exchange" "Buy BTC"
+  Assets:Crypto:Exchange:BTC  0.5 BTC {45000.00 USD}
+  Assets:Checking  -22500.00 USD
+  Expenses:Crypto:Fees  22.50 USD
+  Assets:Checking  -22.50 USD
+
+2024-01-10 * "Exchange" "Buy ETH"
+  Assets:Crypto:Exchange:ETH  5 ETH {2400.00 USD}
+  Assets:Checking  -12000.00 USD
+  Expenses:Crypto:Fees  12.00 USD
+  Assets:Checking  -12.00 USD
+
+2024-01-15 * "Transfer to cold wallet"
+  Assets:Crypto:ColdWallet:BTC  0.5 BTC {45000.00 USD}
+  Assets:Crypto:Exchange:BTC  -0.5 BTC {45000.00 USD}
+
+2024-02-01 price BTC  48000.00 USD
+2024-02-01 price ETH   2600.00 USD
+
+2024-02-05 * "Mining pool" "Mining reward"
+  Assets:Crypto:Exchange:BTC  0.01 BTC {48000.00 USD}
+  Income:Crypto:Mining
+
+2024-02-10 * "Staking reward" "ETH staking"
+  Assets:Crypto:Exchange:ETH  0.1 ETH {2600.00 USD}
+  Income:Crypto:Staking
+
+2024-02-15 * "Exchange" "Sell some ETH"
+  Assets:Checking  5200.00 USD
+  Assets:Crypto:Exchange:ETH  -2 ETH {2400.00 USD}
+  Income:CapitalGains:Crypto
+  Expenses:Crypto:Fees  5.20 USD
+  Assets:Checking  -5.20 USD
+
+2024-03-01 price BTC  52000.00 USD
+2024-03-01 price ETH   2800.00 USD
+
+2024-03-10 * "Exchange" "Buy more BTC"
+  Assets:Crypto:Exchange:BTC  0.3 BTC {51000.00 USD}
+  Assets:Checking  -15300.00 USD
+  Expenses:Crypto:Fees  15.30 USD
+  Assets:Checking  -15.30 USD
+
+2024-03-20 * "Exchange" "Sell BTC"
+  Assets:Checking  15600.00 USD
+  Assets:Crypto:Exchange:BTC  -0.3 BTC {51000.00 USD}
+  Income:CapitalGains:Crypto
+  Expenses:Crypto:Fees  15.60 USD
+  Assets:Checking  -15.60 USD

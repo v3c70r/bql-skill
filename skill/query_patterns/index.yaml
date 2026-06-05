@@ -1,0 +1,60 @@
+- intent: total_spending_by_category
+  category: spending
+  examples:
+  - How much did I spend on food?
+  - What were my total expenses by category?
+- intent: monthly_spending_trend
+  category: spending
+  examples:
+  - Show my monthly spending
+  - How has my spending changed over time?
+- intent: merchant_spending
+  category: spending
+  examples:
+  - How much did I spend at Amazon?
+  - What did I buy from Walmart?
+- intent: income_by_source
+  category: cashflow
+  examples:
+  - How much did I earn?
+  - What was my salary income?
+- intent: net_worth
+  category: networth
+  examples:
+  - What is my net worth?
+  - How much am I worth?
+- intent: portfolio_holdings
+  category: investments
+  examples:
+  - What stocks do I own?
+  - How many AAPL shares do I have?
+- intent: dividend_income
+  category: investments
+  examples:
+  - How much dividend did I receive?
+  - Show my dividend income
+- intent: cash_flow
+  category: cashflow
+  examples:
+  - What is my cash flow?
+  - Income vs expenses by month
+- intent: recurring_expenses
+  category: spending
+  examples:
+  - What are my subscriptions?
+  - Find recurring payments
+- intent: tagged_transactions
+  category: metadata
+  examples:
+  - Show my vacation expenses
+  - 'What did I spend on #home-improvement?'
+- intent: last_quarter
+  category: spending
+  examples:
+  - What did I spend last quarter?
+  - Q1 expenses
+- intent: largest_transactions
+  category: spending
+  examples:
+  - What are my biggest expenses?
+  - Largest transactions this year

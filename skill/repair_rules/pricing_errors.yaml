@@ -1,0 +1,6 @@
+no_price_data:
+  symptom: VALUE() returns null
+  fix: Ensure price directives exist for the relevant dates and commodities
+missing_convert:
+  symptom: Multi-currency amounts not comparable
+  fix: Use CONVERT(position, 'USD') for currency conversion

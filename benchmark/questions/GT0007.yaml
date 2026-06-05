@@ -1,0 +1,9 @@
+id: GT0007
+ledger: synthetic/simple_personal.bean
+question: What was my total income in Q1 2024?
+expected_result:
+  total_income: 15000.0
+category: cashflow
+difficulty: easy
+tags:
+- synthetic

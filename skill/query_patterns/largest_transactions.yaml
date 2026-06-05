@@ -1,0 +1,12 @@
+intent: largest_transactions
+question_examples:
+- What are my biggest expenses?
+- Largest transactions this year
+- Top 5 purchases
+query_template: "SELECT date, payee, narration, account, COST(position) as amount\n\
+  FROM transactions\nWHERE account ~ 'Expenses:'\n  AND date >= '{start_date}'\nORDER\
+  \ BY amount DESC\nLIMIT {n}"
+required_assumptions:
+- COST() returns positive amounts for expenses
+output_shape: date, payee, narration, account, amount
+category: spending

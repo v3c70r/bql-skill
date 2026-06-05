@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reports (generated at runtime, but keep structure via .gitkeep)
+reports/*.yaml
+!reports/**/.gitkeep
+benchmark/evaluation_runs/*.yaml
+benchmark/evaluation_runs/*.json
+!benchmark/evaluation_runs/.gitkeep
+
+# Generated corpus artifacts (ledger files are committed)
+corpus/metadata/*.yaml
+!corpus/**/.gitkeep

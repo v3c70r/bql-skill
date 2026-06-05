@@ -1,0 +1,9 @@
+id: GT0012
+ledger: synthetic/investment.bean
+question: How much did I pay in commissions?
+expected_result:
+  total_commissions: 42.0
+category: investments
+difficulty: easy
+tags:
+- synthetic

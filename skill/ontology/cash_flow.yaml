@@ -1,0 +1,6 @@
+concept: Cash Flow
+formula: Income - Expenses over time
+bql_pattern: GROUP BY MONTH(date) with income and expense sums
+examples:
+- What is my cash flow?
+- Monthly income vs expenses

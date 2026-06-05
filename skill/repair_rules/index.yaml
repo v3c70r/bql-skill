@@ -1,0 +1,29 @@
+syntax_errors:
+- missing_cost
+- wrong_regex_operator
+- missing_group_by
+- cost_after_group
+- wrong_date_format
+semantic_errors:
+- wrong_account_prefix
+- too_specific_regex
+- too_broad_regex
+- wrong_sign
+aggregation_errors:
+- missing_having
+- wrong_level_aggregation
+inventory_errors:
+- units_vs_cost
+- inventory_table_usage
+pricing_errors:
+- no_price_data
+- missing_convert
+multi_currency_errors:
+- mixed_currencies
+- implicit_conversion
+date_errors:
+- exclusive_end_date
+- quarter_definition
+metadata_errors:
+- tag_format
+- link_access

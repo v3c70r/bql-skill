@@ -1,0 +1,6 @@
+timestamp: '2026-06-04T21:01:46.652692+00:00'
+regression_detected: false
+details: {}
+current_overall: 100.0
+previous_overall: 84.2
+recommendation: No regressions detected. Safe to proceed.

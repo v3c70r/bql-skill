@@ -1,0 +1,9 @@
+id: GT0008
+ledger: synthetic/simple_personal.bean
+question: What were my total expenses in January 2024?
+expected_result:
+  total_expenses: 2396.09
+category: cashflow
+difficulty: easy
+tags:
+- synthetic

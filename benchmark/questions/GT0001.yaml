@@ -1,0 +1,9 @@
+id: GT0001
+ledger: synthetic/simple_personal.bean
+question: What were my total restaurant expenses in Q1 2024?
+expected_result:
+  total: 236.8
+category: spending
+difficulty: medium
+tags:
+- synthetic

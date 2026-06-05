@@ -1,0 +1,9 @@
+id: GT0016
+ledger: synthetic/multicurrency.bean
+question: What were my total travel expenses in EUR?
+expected_result:
+  total_eur_travel: 800.0
+category: multicurrency
+difficulty: medium
+tags:
+- synthetic

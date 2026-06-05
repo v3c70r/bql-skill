@@ -1,0 +1,77 @@
+keywords:
+- SELECT
+- FROM
+- WHERE
+- GROUP BY
+- ORDER BY
+- LIMIT
+- AND
+- OR
+- NOT
+- AS
+- 'ON'
+- IN
+- JOIN
+- SUM
+- AVG
+- COUNT
+- MIN
+- MAX
+- COST
+- UNITS
+- VALUE
+- CONVERT
+- OPEN
+- CLOSE
+- CLEAR
+tables:
+  transactions: 'All postings with their transaction context. Columns: date, flag,
+    payee, narration, account, position, balance, links, tags, meta'
+  balances: 'Account balances. Columns: account, balance'
+  inventory: 'Commodity holdings. Columns: account, position'
+  commodities: 'Commodity definitions. Columns: commodity, meta'
+  accounts: 'Account definitions. Columns: account, open_date, close_date, meta'
+  prices: 'Price directives. Columns: date, commodity, price'
+  events: 'Event directives. Columns: date, type, description'
+  notes: 'Note directives. Columns: date, account, comment'
+  documents: 'Document directives. Columns: date, account, filename'
+functions:
+  SUM(expr): Sum of expression values
+  AVG(expr): Average of expression values
+  COUNT(expr): Count of non-null expression values
+  MIN(expr): Minimum of expression values
+  MAX(expr): Maximum of expression values
+  FIRST(expr): First value in group
+  LAST(expr): Last value in group
+  COST(position): Get cost value of a position (base currency)
+  UNITS(position): Get number of units in a position
+  COST(sum(position)): Total cost of aggregated positions
+  UNITS(sum(position)): Total units of aggregated positions
+  VALUE(position, date): Market value at given date (requires prices)
+  account ~ 'pattern': Account name matches regex pattern
+  payee ~ 'pattern': Payee matches regex pattern
+  narration ~ 'pattern': Narration matches regex pattern
+  YEAR(date): Extract year from date
+  MONTH(date): Extract month from date
+  DAY(date): Extract day from date
+  ANY_METADATA('key'): Get any metadata value for key
+  META('key'): Get metadata value
+  ENTRY_META('key'): Get entry-level metadata
+  CONVERT(position, 'CUR'): Convert position to target currency
+operators:
+  '=': Equality
+  '!=': Inequality
+  <: Less than
+  <=: Less than or equal
+  '>': Greater than
+  '>=': Greater than or equal
+  '~': Regex match
+  '!~': Regex non-match
+  AND: Logical AND
+  OR: Logical OR
+  NOT: Logical NOT
+  IN: Value in list
+  IS NULL: Check for null
+  IS NOT NULL: Check for non-null
+  BETWEEN: Range check
+  LIKE: SQL-like pattern match

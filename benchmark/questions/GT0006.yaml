@@ -1,0 +1,9 @@
+id: GT0006
+ledger: synthetic/simple_personal.bean
+question: How much did utilities cost per month?
+expected_result:
+  january: 185.0
+category: budgeting
+difficulty: medium
+tags:
+- synthetic

@@ -1,0 +1,6 @@
+concept: Recurring Expenses
+formula: "Payees with \u2265N transactions of similar amounts"
+bql_pattern: GROUP BY payee HAVING COUNT(*) >= N
+examples:
+- Subscriptions
+- Monthly bills

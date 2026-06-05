@@ -1,0 +1,9 @@
+id: GT0018
+ledger: synthetic/business.bean
+question: How much was spent on payroll?
+expected_result:
+  total_payroll: 8000.0
+category: spending
+difficulty: easy
+tags:
+- synthetic

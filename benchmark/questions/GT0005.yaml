@@ -1,0 +1,9 @@
+id: GT0005
+ledger: synthetic/simple_personal.bean
+question: What were my monthly rent payments?
+expected_result:
+  monthly_rent: 1500.0
+category: budgeting
+difficulty: easy
+tags:
+- synthetic

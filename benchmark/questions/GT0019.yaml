@@ -1,0 +1,9 @@
+id: GT0019
+ledger: synthetic/business.bean
+question: What was the marketing spend?
+expected_result:
+  total_marketing: 1100.0
+category: spending
+difficulty: easy
+tags:
+- synthetic

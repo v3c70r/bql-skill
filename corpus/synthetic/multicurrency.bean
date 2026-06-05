@@ -1,0 +1,78 @@
+option "title" "Multi-Currency Ledger"
+option "operating_currency" "USD"
+
+2024-01-01 open Assets:Checking:USD
+2024-01-01 open Assets:Checking:EUR
+2024-01-01 open Assets:Checking:GBP
+2024-01-01 open Assets:Checking:JPY
+2024-01-01 open Income:Salary:USD
+2024-01-01 open Income:Freelance:EUR
+2024-01-01 open Income:Freelance:GBP
+2024-01-01 open Expenses:Rent:USD
+2024-01-01 open Expenses:Travel:EUR
+2024-01-01 open Expenses:Travel:GBP
+
+2024-01-05 * "US Employer" "Salary"
+  Assets:Checking:USD  6000.00 USD
+  Income:Salary:USD
+
+2024-01-10 * "Landlord" "Rent"
+  Expenses:Rent:USD  1800.00 USD
+  Assets:Checking:USD
+
+2024-01-15 price EUR  1.09 USD
+2024-01-15 price GBP  1.27 USD
+
+2024-01-15 * "EU Client" "Freelance work"
+  Assets:Checking:EUR  2000.00 EUR
+  Income:Freelance:EUR
+
+2024-01-18 * "Hotel Paris" "Business trip"
+  Expenses:Travel:EUR  450.00 EUR
+  Assets:Checking:EUR
+
+2024-01-20 * "UK Client" "Consulting"
+  Assets:Checking:GBP  1500.00 GBP
+  Income:Freelance:GBP
+
+2024-01-25 * "London Restaurant" "Client dinner"
+  Expenses:Travel:GBP  120.00 GBP
+  Assets:Checking:GBP
+
+2024-02-01 * "US Employer" "Salary"
+  Assets:Checking:USD  6000.00 USD
+  Income:Salary:USD
+
+2024-02-05 * "Landlord" "Rent"
+  Expenses:Rent:USD  1800.00 USD
+  Assets:Checking:USD
+
+2024-02-10 price EUR  1.08 USD
+2024-02-10 price GBP  1.26 USD
+
+2024-02-12 * "EU Client" "Freelance work"
+  Assets:Checking:EUR  1800.00 EUR
+  Income:Freelance:EUR
+
+2024-02-20 * "Paris Hotel" "Weekend trip"
+  Expenses:Travel:EUR  350.00 EUR
+  Assets:Checking:EUR
+
+2024-03-01 * "US Employer" "Salary"
+  Assets:Checking:USD  6000.00 USD
+  Income:Salary:USD
+
+2024-03-05 * "Landlord" "Rent"
+  Expenses:Rent:USD  1800.00 USD
+  Assets:Checking:USD
+
+2024-03-10 price EUR  1.10 USD
+2024-03-10 price GBP  1.28 USD
+
+2024-03-15 * "EU Client" "Freelance work"
+  Assets:Checking:EUR  2500.00 EUR
+  Income:Freelance:EUR
+
+2024-03-20 * "UK Client" "Project"
+  Assets:Checking:GBP  2000.00 GBP
+  Income:Freelance:GBP

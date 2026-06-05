@@ -1,0 +1,28 @@
+- concept: Net Worth
+  formula: Assets - Liabilities
+- concept: Savings Rate
+  formula: "(Income - Expenses) / Income \xD7 100"
+- concept: Total Income
+  formula: SUM of all income postings
+- concept: Total Expenses
+  formula: SUM of all expense postings
+- concept: Cash Flow
+  formula: Income - Expenses over time
+- concept: Burn Rate
+  formula: Average monthly expenses
+- concept: Portfolio Allocation
+  formula: Distribution of investments by asset
+- concept: Capital Gains
+  formula: Proceeds - Cost Basis of sold assets
+- concept: Dividend Income
+  formula: SUM of dividend postings
+- concept: Cost Basis
+  formula: Original cost of investment positions
+- concept: Market Value
+  formula: "Current price \xD7 units held"
+- concept: Recurring Expenses
+  formula: "Payees with \u2265N transactions of similar amounts"
+- concept: Category Budget
+  formula: Actual spending vs budgeted amount per category
+- concept: Taxable Income
+  formula: Gross income - deductions

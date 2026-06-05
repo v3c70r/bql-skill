@@ -1,0 +1,9 @@
+id: GT0015
+ledger: synthetic/multicurrency.bean
+question: How much did I earn from UK clients in GBP?
+expected_result:
+  total_gbp_income: 3500.0
+category: multicurrency
+difficulty: hard
+tags:
+- synthetic

@@ -1,0 +1,6 @@
+concept: Portfolio Allocation
+formula: Distribution of investments by asset
+bql_pattern: SELECT account, COST(sum(position)) FROM inventory GROUP BY account
+examples:
+- How is my portfolio allocated?
+- What percentage is in stocks?

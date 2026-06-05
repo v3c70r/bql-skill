@@ -1,0 +1,6 @@
+units_vs_cost:
+  symptom: Using COST for share counts or UNITS for dollar amounts
+  fix: Use UNITS() for share counts, COST() for monetary values
+inventory_table_usage:
+  symptom: Can't query inventory positions from transactions table
+  fix: Use inventory table for position-level queries, transactions for flow

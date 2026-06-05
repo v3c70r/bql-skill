@@ -1,0 +1,9 @@
+id: GT0010
+ledger: synthetic/investment.bean
+question: How many shares of AAPL do I own?
+expected_result:
+  shares: -2285.0
+category: investments
+difficulty: medium
+tags:
+- synthetic

@@ -1,0 +1,6 @@
+concept: Capital Gains
+formula: Proceeds - Cost Basis of sold assets
+bql_pattern: WHERE account ~ 'Income:CapitalGains'
+examples:
+- What were my capital gains?
+- Profit from selling stocks

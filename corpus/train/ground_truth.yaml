@@ -1,0 +1,120 @@
+- id: GT0001
+  ledger: synthetic/simple_personal.bean
+  question: What were my total restaurant expenses in Q1 2024?
+  expected_result:
+    total: 236.8
+  category: spending
+  difficulty: medium
+  source: synthetic
+- id: GT0002
+  ledger: synthetic/simple_personal.bean
+  question: How much did I spend on food in January 2024?
+  expected_result:
+    total: 431.1
+  category: spending
+  difficulty: easy
+  source: synthetic
+- id: GT0003
+  ledger: synthetic/simple_personal.bean
+  question: What was my largest single expense?
+  expected_result:
+    max_amount: 1500.0
+  category: spending
+  difficulty: medium
+  source: synthetic
+- id: GT0004
+  ledger: synthetic/simple_personal.bean
+  question: How much did I spend on Amazon?
+  expected_result:
+    total: 209.49
+  category: spending
+  difficulty: easy
+  source: synthetic
+- id: GT0005
+  ledger: synthetic/simple_personal.bean
+  question: What were my monthly rent payments?
+  expected_result:
+    monthly_rent: 1500.0
+  category: budgeting
+  difficulty: easy
+  source: synthetic
+- id: GT0006
+  ledger: synthetic/simple_personal.bean
+  question: How much did utilities cost per month?
+  expected_result:
+    january: 185.0
+  category: budgeting
+  difficulty: medium
+  source: synthetic
+- id: GT0007
+  ledger: synthetic/simple_personal.bean
+  question: What was my total income in Q1 2024?
+  expected_result:
+    total_income: 15000.0
+  category: cashflow
+  difficulty: easy
+  source: synthetic
+- id: GT0008
+  ledger: synthetic/simple_personal.bean
+  question: What were my total expenses in January 2024?
+  expected_result:
+    total_expenses: 2396.09
+  category: cashflow
+  difficulty: easy
+  source: synthetic
+- id: GT0009
+  ledger: synthetic/simple_personal.bean
+  question: How much is in my savings account?
+  expected_result:
+    savings_balance: 3000.0
+  category: networth
+  difficulty: easy
+  source: synthetic
+- id: GT0010
+  ledger: synthetic/investment.bean
+  question: How many shares of AAPL do I own?
+  expected_result:
+    shares: -2285.0
+  category: investments
+  difficulty: medium
+  source: synthetic
+- id: GT0011
+  ledger: synthetic/investment.bean
+  question: What was my total dividend income?
+  expected_result:
+    total_dividends: 11.4
+  category: investments
+  difficulty: medium
+  source: synthetic
+- id: GT0012
+  ledger: synthetic/investment.bean
+  question: How much did I pay in commissions?
+  expected_result:
+    total_commissions: 42.0
+  category: investments
+  difficulty: easy
+  source: synthetic
+- id: GT0013
+  ledger: synthetic/investment.bean
+  question: What is my total investment position?
+  expected_result:
+    total_cost: 11032.0
+  category: investments
+  difficulty: medium
+  source: synthetic
+- id: GT0014
+  ledger: synthetic/multicurrency.bean
+  question: What was my total freelance income in EUR?
+  expected_result:
+    total_eur_income: 6300.0
+  category: multicurrency
+  difficulty: hard
+  source: synthetic
+- id: GT0015
+  ledger: synthetic/multicurrency.bean
+  question: How much did I earn from UK clients in GBP?
+  expected_result:
+    total_gbp_income: 3500.0
+  category: multicurrency
+  difficulty: hard
+  source: synthetic

@@ -1,0 +1,21 @@
+timestamp: '2026-06-04T21:01:46.809417+00:00'
+criteria:
+  overall_score_>=95: true
+  spending_>=95: true
+  budgeting_>=95: true
+  cashflow_>=95: true
+  networth_>=95: true
+  investments_>=90: true
+  multicurrency_>=90: true
+  tax_>=90: false
+  metadata_>=90: false
+  consecutive_runs_>=3: false
+  regression_rate_<2%: false
+passed: 7
+total: 11
+mature: false
+missing:
+- tax_>=90
+- metadata_>=90
+- consecutive_runs_>=3
+- regression_rate_<2%

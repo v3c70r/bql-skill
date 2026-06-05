@@ -1,0 +1,6 @@
+tag_format:
+  symptom: Tag filter not matching
+  fix: 'Tags are stored without # prefix in BQL. Use tags ~ ''tagname'' not ''#tagname'''
+link_access:
+  symptom: Can't filter by links
+  fix: Use links ~ 'pattern' to filter by link values

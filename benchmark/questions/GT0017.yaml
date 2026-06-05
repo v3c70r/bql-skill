@@ -1,0 +1,9 @@
+id: GT0017
+ledger: synthetic/business.bean
+question: What was the total revenue for the business?
+expected_result:
+  total_revenue: 18500.0
+category: cashflow
+difficulty: easy
+tags:
+- synthetic

@@ -1,0 +1,9 @@
+id: GT0011
+ledger: synthetic/investment.bean
+question: What was my total dividend income?
+expected_result:
+  total_dividends: 11.4
+category: investments
+difficulty: medium
+tags:
+- synthetic

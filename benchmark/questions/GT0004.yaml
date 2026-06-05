@@ -1,0 +1,9 @@
+id: GT0004
+ledger: synthetic/simple_personal.bean
+question: How much did I spend on Amazon?
+expected_result:
+  total: 209.49
+category: spending
+difficulty: easy
+tags:
+- synthetic

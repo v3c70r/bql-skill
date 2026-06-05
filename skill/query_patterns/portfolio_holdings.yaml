@@ -1,0 +1,13 @@
+intent: portfolio_holdings
+question_examples:
+- What stocks do I own?
+- How many AAPL shares do I have?
+- Show my investment portfolio
+query_template: "SELECT account,\n       UNITS(sum(position)) as shares,\n       COST(sum(position))\
+  \ as cost_basis\nFROM inventory\nWHERE account ~ 'Assets:{brokerage}:'\nGROUP BY\
+  \ account\nORDER BY account"
+required_assumptions:
+- inventory table available
+- UNITS() for share count, COST() for basis
+output_shape: account, shares, cost_basis
+category: investments
