@@ -2,6 +2,21 @@
 
 Natural Language Beancount Query Language (BQL) skill. Converts finance questions into correct BeanQuery 0.2.0 queries and executes them against Beancount ledger files.
 
+## ⚠️ Critical: BeanQuery 0.2.0 Rules
+
+This skill targets **beanquery 0.2.0**, which differs significantly from older beancount v2 BQL. You MUST follow these rules:
+
+1. **No `SUM()` on Amount types** — `SUM(COST(position))` returns empty tuple. Sum in post-processing.
+2. **No `LIMIT`** — filter by date/payee instead.
+3. **No `JOIN`** — use `entries` table for account context.
+4. **`postings` has NO `account` column** — only `position`. `transactions` has `accounts` as a SET.
+5. **`accounts` is a SET** — filter with `'Expenses:Food' IN accounts`.
+6. **Date filters:** `year(date) = 2024 AND month(date) = 1` — string comparisons fail.
+7. **Payee:** `payee ~ 'Restaurant'` (regex), not `payee = '...'`.
+8. **No `position > 0`** — parse error. Filter sign in post-processing.
+9. **Base query:** `SELECT position FROM postings WHERE ...`
+10. **Narration for tickers:** `narration ~ 'AAPL'` for stock filtering.
+
 ## Activation
 
 This skill activates when the user asks questions about Beancount ledger data, personal finance queries, or BQL execution. Natural language triggers include:
@@ -16,36 +31,21 @@ This skill activates when the user asks questions about Beancount ledger data, p
 
 Or use the explicit command: `/bql-query-skill <question>`
 
-## Usage
+## Response Format
 
-The skill works in two modes:
+Always respond with:
 
-### 1. Direct Query Mode
-User provides a natural language question + a Beancount ledger path. The skill generates and executes the BQL query:
-
+```yaml
+intent: <what the user wants>
+query: |
+  SELECT position FROM postings WHERE ...
+post_process: sum_positive | max | count | avg
+explanation: <why this query works>
 ```
-User: "How much did I spend on restaurants last quarter? Ledger is at ~/finances/2024.bean"
-```
-
-### 2. Pipeline Mode
-User runs the multi-agent research pipeline to build the skill knowledge base, evaluate against benchmarks, and improve:
-
-```bash
-python scripts/run_pipeline.py
-```
-
-## BeanQuery 0.2.0 Notes
-
-- Use `postings` table for amount queries (no account column)
-- Use `transactions` table for account/tag filtering (accounts is a SET)
-- Use `year(date)`, `month(date)` for date filtering
-- Use `payee ~ 'pattern'` for merchant matching
-- `SUM()` does not aggregate Amount types — do aggregation in post-processing
-- No `LIMIT`, no `JOIN`
 
 ## Key Files
 
-- `SKILL.md` — Full skill definition and query patterns
+- `SKILL.md` — Full skill definition with all query patterns
 - `references/prompt.md` — Complete BQL knowledge base (10.5K chars)
 - `references/knowledge_base/` — Tables, functions, operators reference
 - `references/query_patterns/` — 12 reusable query templates
@@ -54,6 +54,16 @@ python scripts/run_pipeline.py
 - `scripts/run_pipeline.py` — Full 4-agent pipeline orchestrator
 - `scripts/run_evaluation.py` — Standalone evaluation runner
 - `corpus/synthetic/` — 6 synthetic Beancount ledgers
+
+## Pipeline Commands
+
+```bash
+python run_pipeline.py                          # Full pipeline
+python run_pipeline.py --agent 3                # Auditor only
+python run_pipeline.py --loop --max-iterations 10  # Improvement loop
+python run_evaluation.py                        # Standalone eval
+python -m unittest tests.test_core -v           # Unit tests
+```
 
 ## Reporting Issues
 

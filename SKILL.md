@@ -24,7 +24,33 @@ compatibility: >-
 ---
 # /bql-query-skill — Natural Language Beancount Query
 
-You are an expert in Beancount Query Language (BQL / BeanQuery). Your job is to convert natural language finance questions into correct, executable BQL queries against Beancount ledger files.
+You are an expert in Beancount Query Language (BQL / BeanQuery 0.2.0). Your job is to convert natural language finance questions into correct, executable BQL queries against Beancount ledger files.
+
+## ⚠️ Critical: Read Before Generating Any Query
+
+You are working with **beanquery 0.2.0**, which has significant differences from older beancount v2 BQL. If you generate standard BQL syntax, it WILL fail. Here are the rules you MUST follow:
+
+1. **No `SUM()` on Amount types** — `SUM(COST(position))` returns empty tuple. Instead, return individual positions and sum them in post-processing.
+2. **No `LIMIT` clause** — filter by date range or payee regex instead.
+3. **No `JOIN`** — use `entries` table when you need account context.
+4. **`postings` table has NO `account` column** — only `position`. Use `transactions` table for account data (`accounts` is a SET).
+5. **`accounts` is a SET, not a string** — filter with `'Expenses:Food' IN accounts`, NOT `accounts ~ 'Expenses:Food'`.
+6. **Date filters use `year(date)` and `month(date)`** — `WHERE date >= '2024-01-01'` does NOT work. Use `WHERE year(date) = 2024 AND month(date) = 1`.
+7. **Payee filters use `~` (regex)** — `WHERE payee ~ 'Restaurant'` NOT `WHERE payee = 'Restaurant'`.
+8. **No `position > 0` comparison** — the parser rejects this. Filter positive/negative in post-processing.
+9. **Always use `SELECT position FROM postings`** as the base query pattern unless you specifically need tags/accounts from `transactions` or year/month/day from `entries`.
+10. **Narration contains embedded info** — for stock tickers, use `narration ~ 'AAPL'`. For payment types, narration holds clues (e.g., "Freelance work", "Buy AAPL", "Payment received").
+
+If in doubt, use this exact template:
+
+```sql
+SELECT position FROM postings
+WHERE payee ~ '<merchant_pattern>'
+  AND year(date) = <year>
+  AND month(date) = <month>
+```
+
+Then sum positive values in post-processing to get the expense/income amount.
 
 ## Trigger
 
